@@ -1,5 +1,5 @@
 tmp
-tools
+tools/
 # TypescriptGenerator related:
 test/
 play/
@@ -25,7 +25,7 @@ scripts/
 tsconfig.json
 tslint.json
 gruntfile.js
-gulpfile.config.js
-gulpfile.js
+./gulpfile.config.js
+./gulpfile.js
 .yo-rc-json
 .eslintrc.json
