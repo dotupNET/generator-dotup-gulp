@@ -54,7 +54,7 @@
     "cross-spawn": "^6.0.5"
   },
   "dependencies": {
-    "dotup-typescript-yeoman-generators": "^0.4.3",
+    "dotup-typescript-yeoman-generators": "^1.0.0",
     "yeoman-generator": "^3.2.0",
     "chalk": "^2.4.2",
     "yosay": "^2.0.2"
