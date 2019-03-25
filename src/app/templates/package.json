@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "dotup-ts-git-wrapper": "^1.0.0",
     "gulp": "^4.0.0",
     "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^5.0.1",

@@ -1,6 +1,6 @@
 {
   "name": "generator-dotup-gulp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Yeoman generator to add gulp tools to your project.",
   "main": "generators/app/index.js",
   "types": "generators/app/index.d.ts",
@@ -51,7 +51,8 @@
     "@types/yeoman-generator": "3.1.1",
     "yeoman-test": "^1.9.1",
     "yeoman-assert": "^3.1.1",
-    "cross-spawn": "^6.0.5"
+    "cross-spawn": "^6.0.5",
+    "dotup-ts-git-wrapper": "^1.0.0"
   },
   "dependencies": {
     "dotup-typescript-yeoman-generators": "^1.0.0",
