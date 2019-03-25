@@ -1,6 +1,16 @@
 {
+  "name": "generator-dotup-gulp",
+  "version": "0.0.0",
   "main": "generators/app/index.js",
   "types": "generators/app/index.d.ts",
+  "author": {
+    "name": "Peter Ullrich",
+    "email": "dotup.software@gmail.com"
+  },
+  "keywords": [
+    "yeoman",
+    "generator"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dotupNET/generator-dotup-gulp.git"
@@ -42,16 +52,6 @@
     "yeoman-assert": "^3.1.1",
     "cross-spawn": "^6.0.5"
   },
-  "version": "0.0.0",
-  "name": "generator-dotup-gulp",
-  "author": {
-    "name": "Peter Ullrich",
-    "email": "dotup.software@gmail.com"
-  },
-  "keywords": [
-    "yeoman",
-    "generator"
-  ],
   "dependencies": {
     "dotup-typescript-yeoman-generators": "^0.4.3",
     "yeoman-generator": "^3.2.0",

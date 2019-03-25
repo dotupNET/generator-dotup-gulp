@@ -1,3 +1,3 @@
-import { MyGenerator } from './MyGenerator';
+import { GulpGenerator } from './GulpGenerator';
 
-module.exports = MyGenerator;
+module.exports = GulpGenerator;

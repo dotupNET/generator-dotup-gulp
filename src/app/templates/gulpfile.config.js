@@ -5,25 +5,25 @@ class GulpConfig {
   constructor() {
 
     // source
-    this.sourcePath = 'src';
+    this.sourcePath = '<%= sourcePath %>';
     this.tsSourceFiles = this.sourcePath + '/**/*.ts';
 
     // test
-    this.testPath = 'test';
+    this.testPath = '<%= testPath %>';
     this.testFiles = `${this.testPath}/**/*.ts`;
 
     // target
-    this.targetPath = 'generators';
+    this.targetPath = '<%= targetPath %>';
 
     // docs
-    this.docsPath = 'docs';
+    this.docsPath = '<%= docsPath %>';
     this.docsFiles = this.docsPath + '/**/*';
 
     // Static files
     this.statics = [
       {
-        sourcePath: `${this.sourcePath}/**/templates/**`,
-        targetPath: `${this.targetPath}`
+        sourcePath: `${this.sourcePath}/assets/**`,
+        targetPath: `${this.targetPath}/assets`
       }
     ];
   }
