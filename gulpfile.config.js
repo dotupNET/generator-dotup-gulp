@@ -22,7 +22,7 @@ class GulpConfig {
     // Static files
     this.statics = [
       {
-        sourcePath: `${this.sourcePath}/**/templates/**`,
+        sourcePath: `${this.sourcePath}/**/templates/**/*`,
         targetPath: `${this.targetPath}`
       }
     ];
