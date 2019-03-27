@@ -1,4 +1,4 @@
 # Gulp:
-tools/
+/tools/
 ./gulpfile.config.js
 ./gulpfile.js

@@ -1,13 +1,11 @@
 tmp
+/tools/
 # TypescriptGenerator related:
 test/
 play/
 coverage/
 secrets/
 src/
-src/sample.ts
-src/spec/
-src/test/
 dist/spec/
 dist/sample.js
 spec/
@@ -15,7 +13,7 @@ docs/
 scripts/
 .vscode
 .gitignore
-.npmignore
+/.npmignore
 .travis.yml
 .idea
 .env
@@ -23,6 +21,7 @@ scripts/
 tsconfig.json
 tslint.json
 gruntfile.js
-
+/gulpfile.config.js
+/gulpfile.js
 .yo-rc.json
 .eslintrc.json

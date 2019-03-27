@@ -3,13 +3,12 @@ const
   GitWrapper = require('dotup-ts-git-wrapper').GitWrapper
   ;
 
-function publish(done) {
+async function publish() {
   const git = new GitWrapper();
   if (git.hasChanges()) {
     throw new Error('Can not be published with local changes. Commit and push first.');
   }
   spawn.sync('npm', ['publish'], { stdio: 'inherit' });
-  done();
 }
 module.exports.publish = publish;
 // module.exports.postBuild = publish;

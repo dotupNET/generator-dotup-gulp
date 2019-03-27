@@ -9,6 +9,18 @@
       "problemMatcher": [
         "$tsc"
       ]
+    },
+    {
+      "type": "npm",
+      "script": "npm-publish-dry",
+      "problemMatcher": []
+    },
+    {
+      "type": "gulp",
+      "task": "project-build",
+      "problemMatcher": [
+        "$tsc"
+      ]
     }
   ]
 }
