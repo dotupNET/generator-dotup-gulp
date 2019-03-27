@@ -8,6 +8,7 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-typedoc": "^2.2.2",
     "gulp-mocha": "^6.0.0",
-    "del": "^4.0.0"
+    "del": "^4.0.0",
+    "cross-spawn": "^6.0.5"
   }
 }
