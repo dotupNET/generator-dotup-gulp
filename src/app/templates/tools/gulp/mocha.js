@@ -7,7 +7,7 @@ const
 
 const config = new Config();
 
-function run() {
+function preBuild() {
   return gulp
     .src(config.testFiles)
     .pipe(
@@ -19,9 +19,9 @@ function run() {
       )
     );
 }
-module.exports.run = run;
+module.exports.preBuild = preBuild;
 
-gulp.task('test-mocha', run);
+gulp.task('test-mocha', preBuild);
 
 // exports['test-mocha'] = run;
 // task('test-mocha', function () {
