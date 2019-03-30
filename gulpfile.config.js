@@ -3,13 +3,13 @@ const BuildMode = require('./tools/gulp/gulpBuildMode');
 
 const Paths = {
   // source
-  sourcePath: 'src/skill',
-
-  // test
-  testPath: 'test',
+  sourcePath: 'src',
 
   // target
-  targetPath: 'dist',
+  targetPath: 'generators',
+  
+  // test
+  testPath: 'test',
 
   // docs
   docsPath: 'docs'
