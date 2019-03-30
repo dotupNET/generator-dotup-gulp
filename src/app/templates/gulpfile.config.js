@@ -1,5 +1,5 @@
 'use strict';
-const skill = require('./secrets/skill.config.json');
+//const skill = require('./secrets/skill.config.json');
 const BuildMode = require('./tools/gulp/gulpBuildMode');
 
 const Paths = {
@@ -42,24 +42,20 @@ const GulpConfig =  {
   statics: [
     {
       sourcePath: `${Paths.sourcePath}/assets/**`,
-      targetPath: `${Paths.targetPath}/skill/assets`
-    },
-    {
-      sourcePath: `package.json`,
-      targetPath: `${Paths.targetPath}/skill`
-    }
-  ],
-
-  lambda: [
-    {
-      sourcePath: `${Paths.targetPath}/skill`,
-      targetFile: `${Paths.targetPath}/lambda.zip`,
-      params: {
-        FunctionName: skill.functionArn,
-        Publish: false
-      }
+      targetPath: `${Paths.targetPath}`
     }
   ]
+
+  // lambda: [
+  //   {
+  //     sourcePath: `${Paths.targetPath}/skill`,
+  //     targetFile: `${Paths.targetPath}/lambda.zip`,
+  //     params: {
+  //       FunctionName: skill.functionArn,
+  //       Publish: false
+  //     }
+  //   }
+  // ]
 }
 
 
