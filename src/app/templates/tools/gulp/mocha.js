@@ -2,10 +2,8 @@ const
   gulp = require('gulp'),
   tsc = require('gulp-typescript'),
   mocha = require('gulp-mocha'),
-  Config = require('../../gulpfile.config')
+  config = require('../../gulpfile.config')
   ;
-
-const config = new Config();
 
 function preBuild() {
   return gulp

@@ -1,10 +1,8 @@
 const
   gulp = require('gulp'),
   del = require('del'),
-  Config = require('../../gulpfile.config')
+  config = require('../../gulpfile.config')
   ;
-
-const config = new Config();
 
 function clean() {
   const f = config.statics.map(x => x.targetPath);

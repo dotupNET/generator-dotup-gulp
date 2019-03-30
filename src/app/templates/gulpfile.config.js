@@ -1,32 +1,66 @@
 'use strict';
+const skill = require('./secrets/skill.config.json');
+const BuildMode = require('./tools/gulp/gulpBuildMode');
 
-class GulpConfig {
+const Paths = {
+  // source
+  sourcePath: '<%= sourcePath %>',
 
-  constructor() {
+  // test
+  testPath: '<%= testPath %>',
 
-    // source
-    this.sourcePath = '<%= sourcePath %>';
-    this.tsSourceFiles = this.sourcePath + '/**/*.ts';
+  // target
+  targetPath: '<%= targetPath %>',
 
-    // test
-    this.testPath = '<%= testPath %>';
-    this.testFiles = `${this.testPath}/**/*.ts`;
-
-    // target
-    this.targetPath = '<%= targetPath %>';
-
-    // docs
-    this.docsPath = '<%= docsPath %>';
-    this.docsFiles = this.docsPath + '/**/*';
-
-    // Static files
-    this.statics = [
-      {
-        sourcePath: `${this.sourcePath}/assets/**`,
-        targetPath: `${this.targetPath}/assets`
-      }
-    ];
-  }
-
+  // docs
+  docsPath: '<%= docsPath %>'
 }
+
+const GulpConfig =  {
+
+  buildMode: BuildMode.dev,
+
+  // Root path
+  rootPath: __dirname,
+
+  // source
+  sourcePath: Paths.sourcePath,
+  tsSourceFiles: Paths.sourcePath + '/**/*.ts',
+
+  // test
+  testPath: Paths.testPath,
+  testFiles: `${Paths.testPath}/**/*.ts`,
+
+  // target
+  targetPath: Paths.targetPath,
+
+  // docs
+  docsPath: Paths.docsPath,
+  docsFiles: Paths.docsPath + '/**/*',
+
+  // Static files
+  statics: [
+    {
+      sourcePath: `${Paths.sourcePath}/assets/**`,
+      targetPath: `${Paths.targetPath}/skill/assets`
+    },
+    {
+      sourcePath: `package.json`,
+      targetPath: `${Paths.targetPath}/skill`
+    }
+  ],
+
+  lambda: [
+    {
+      sourcePath: `${Paths.targetPath}/skill`,
+      targetFile: `${Paths.targetPath}/lambda.zip`,
+      params: {
+        FunctionName: skill.functionArn,
+        Publish: false
+      }
+    }
+  ]
+}
+
+
 module.exports = GulpConfig;

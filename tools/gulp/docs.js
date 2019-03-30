@@ -5,10 +5,9 @@ const
   gulpTypedoc = require('gulp-typedoc'),
   spawn = require('cross-spawn'),
   tsc = require('gulp-typescript'),
-  Config = require('../../gulpfile.config')
+  config = require('../../gulpfile.config')
   ;
 
-var config = new Config();
 
 /**
  * Remove all generated docs.

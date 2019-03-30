@@ -1,4 +1,5 @@
 {
+  "lambda": false,
   "build": true,
   "docs": false,
   "mocha": false,
@@ -6,5 +7,6 @@
   "watch": false,
   "yogen": false,
   "npm": true,
-  "statics": true
+  "statics": true,
+  "skill": false
 }

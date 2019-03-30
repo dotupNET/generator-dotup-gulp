@@ -3,7 +3,8 @@ const
   fs = require('fs'),
   path = require('path'),
   gulp = require('gulp'),
-  taskEnabled = require('./gulp.json')
+  taskEnabled = require('./gulp.json'),
+  config = require('../../gulpfile.config')
   ;
 
 const processNames = {
@@ -11,7 +12,9 @@ const processNames = {
   preBuild: 'preBuild',
   build: 'build',
   postBuild: 'postBuild',
+  prePublish: 'prePublish',
   publish: 'publish',
+  postPublish: 'postPublish',
   watch: 'watch'
 };
 
@@ -24,13 +27,20 @@ class GulpLoader {
   }
 
 
-  getProcessSerie(processName) {
+  getProcessSerie(buildMode, processName) {
     const procs = this.getProcess(processName);
     if (procs.length > 0) {
-      return gulp.series(...procs);
+      return gulp.series(this.switchBuildMode(buildMode), ...procs);
     } else {
       return undefined;
     }
+  }
+
+  switchBuildMode(mode) {
+    return async function () {
+      config.buildMode = mode;
+      return Promise.resolve();
+    };
   }
 
   task(name, taskFunction) {
@@ -62,7 +72,9 @@ class GulpLoader {
 
     // Add publish functions..
     if (processName === processNames.publish) {
+      this.addProcess(activeGulps, this.processNames.prePublish, result);
       this.addProcess(activeGulps, this.processNames.publish, result);
+      this.addProcess(activeGulps, this.processNames.postPublish, result);
     }
 
     return result;

@@ -8,6 +8,7 @@ async function publish() {
   if (git.hasChanges()) {
     throw new Error('Can not be published with local changes. Commit and push first.');
   }
+
   spawn.sync('npm', ['publish'], { stdio: 'inherit' });
 }
 module.exports.publish = publish;

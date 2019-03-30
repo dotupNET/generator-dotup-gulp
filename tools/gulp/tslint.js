@@ -1,11 +1,8 @@
 const
   gulp = require('gulp'),
   tslint = require('gulp-tslint'),
-  Config = require('../../gulpfile.config')
+  config = require('../../gulpfile.config')
   ;
-
-var config = new Config();
-
 
 /**
  * Lint all custom TypeScript files.

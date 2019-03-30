@@ -3,10 +3,9 @@ const
   del = require('del'),
   tsc = require('gulp-typescript'),
   sourcemaps = require('gulp-sourcemaps'),
-  Config = require('../../gulpfile.config')
+  config = require('../../gulpfile.config')
   ;
 
-const config = new Config();
 const tsProject = tsc.createProject('tsconfig.json');
 
 const keys = {
