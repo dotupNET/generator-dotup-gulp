@@ -43,7 +43,19 @@ const GulpConfig =  {
       sourcePath: `${Paths.sourcePath}/**/templates/**/*`,
       targetPath: `${Paths.targetPath}`
     }
+  ],
+
+  npmLink: [
+    // {
+    //   name: 'module-name1',
+    //   path: '../'
+    // },
+    // {
+    //   name: 'module-name2',
+    //   path: '../'
+    // }
   ]
+
 }
 
 module.exports = GulpConfig;

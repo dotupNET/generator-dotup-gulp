@@ -44,8 +44,18 @@ const GulpConfig =  {
       sourcePath: `${Paths.sourcePath}/assets/**`,
       targetPath: `${Paths.targetPath}`
     }
-  ]
+  ],
 
+  npmLink: [
+    // {
+    //   name: 'module-name1',
+    //   path: '../'
+    // },
+    // {
+    //   name: 'module-name2',
+    //   path: '../'
+    // }
+  ]
   // lambda: [
   //   {
   //     sourcePath: `${Paths.targetPath}/skill`,
@@ -57,6 +67,5 @@ const GulpConfig =  {
   //   }
   // ]
 }
-
 
 module.exports = GulpConfig;
