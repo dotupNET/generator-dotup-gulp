@@ -1,4 +1,5 @@
 const
+  gulp = require('gulp'),
   spawn = require('cross-spawn'),
   GitWrapper = require('dotup-ts-git-wrapper').GitWrapper,
   config = require('../../gulpfile.config')
